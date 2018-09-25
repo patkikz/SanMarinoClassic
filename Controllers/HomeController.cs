@@ -12,22 +12,28 @@ namespace SanMarinoClassicWebsite.Controllers
 {
     public class HomeController : Controller
     {
+
+        public IActionResult Index()
+        {
+            return View();
+        }
         // GET: /<controller>/
-        private readonly IPieRepository _pieRepository;
+        //    private readonly IPieRepository _pieRepository;
 
-        public HomeController(IPieRepository pieRepository)
-        {
-            _pieRepository = pieRepository;
-        }
+        //    public HomeController(IPieRepository pieRepository)
+        //    {
+        //        _pieRepository = pieRepository;
+        //    }
 
-        public ViewResult Index()
-        {
-            var homeViewModel = new HomeViewModel
-            {
-                PiesOfTheWeek = _pieRepository.IsPieOfTheWeek
-            };
+        //    public ViewResult Index()
+        //    {
+        //        var homeViewModel = new HomeViewModel
+        //        {
+        //            PiesOfTheWeek = _pieRepository.IsPieOfTheWeek
+        //        };
 
-            return View(homeViewModel); 
-        }
+        //        return View(homeViewModel); 
+        //    }
+        //}
     }
 }
